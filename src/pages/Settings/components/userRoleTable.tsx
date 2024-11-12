@@ -27,12 +27,12 @@ const UserRolesTable = ({ data }: UserRolesTableInterface) => {
     ]
     return (
         <div>
-            <Table className="rounded-[40px] pl-2 border border-[#EAECF0] shadow-[0px_2px_4px_-2px_ rgba(16, 24, 40, 0.06)]">
+            <Table className="rounded-[24px] pl-2 border border-[#EAECF0] shadow-[0px_2px_4px_-2px_ rgba(16, 24, 40, 0.06)]">
                 <TableHeader className="">
-                    <TableRow className="bg-[#F9FAFB] text-gray-90">
+                    <TableRow className="bg-[#F9FAFB] text-gray-90 ">
                         {tableHeaders.map((item, index) => (
                             <TableHead className="w-[100px] " key={index}>
-                                <div className="flex items-center">
+                                <div className="flex items-center text-nowrap">
                                     {index === 0 && (
                                         <Checkbox className="border-[#D0D5DD] rounded-[6px]" />
                                     )}{" "}
@@ -48,11 +48,11 @@ const UserRolesTable = ({ data }: UserRolesTableInterface) => {
                 <TableBody className="bg-white-100">
                     {data.map((item, index) => (
                         <TableRow key={index} className="pl-4">
-                            <TableCell className="font-medium">
-                                <Checkbox className="border-[#D0D5DD] rounded-[6px]" />
+                            <TableCell className="font-medium sm:w-[5%]">
+                                <Checkbox className="border-[#D0D5DD] rounded-[6px] " />
                             </TableCell>
 
-                            <TableCell className="font-medium text-black-[#101828] w-[35%]">
+                            <TableCell className="font-medium text-black-[#101828] sm:w-[35%]">
                                 {item.name}
                             </TableCell>
                             <TableCell className="text-gray-90">
@@ -62,7 +62,7 @@ const UserRolesTable = ({ data }: UserRolesTableInterface) => {
                                 {item.dateCreated}
                             </TableCell>
                             <TableCell>{userStatus(item.status)}</TableCell>
-                            <TableCell>
+                            <TableCell className="w-ful">
                                 <img src={item.roleUsers} alt="" />
                             </TableCell>
                             <TableCell className="text-right">

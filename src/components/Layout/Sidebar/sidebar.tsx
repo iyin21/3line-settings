@@ -10,8 +10,8 @@ const Sidebar = () => {
         <aside className="bg-white-100 px-4  py-6 pb-16 ">
             <img src={Logo} alt="" />
             <div
-                className="mt-6 flex items-center border border-[#D6BBFB] p-2  rounded-[8px]"
-                style={{ boxShadow: "0px 0px 0px 4px rgba(244, 235, 255, 1)" }}
+                className="mt-6 flex items-center border border-[#D6BBFB] p-2  rounded-[8px] "
+                style={{ boxShadow: "0px 0px px 4px rgba(244, 235, 255, 1)" }}
             >
                 <div>
                     <Search color="#667085" size={18} />
@@ -20,7 +20,7 @@ const Sidebar = () => {
                 <input
                     type="text"
                     placeholder="Olivia Rhye"
-                    className="pl-2 outline-none "
+                    className="pl-2 outline-none bg-transparent "
                 />
             </div>
             <ul className="mt-6">
@@ -72,7 +72,3 @@ const Sidebar = () => {
     )
 }
 export default Sidebar
-
-// box-shadow: 0px 0px 0px 4px rgba(244, 235, 255, 1);
-
-// box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
