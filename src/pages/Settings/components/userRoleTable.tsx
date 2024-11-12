@@ -10,7 +10,7 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { ArrowDown } from "lucide-react"
 import { CloudDownload } from "lucide-react"
 import { UserRoleType } from "@/types/userRoles.type"
-import { Check } from "lucide-react"
+import { userStatus } from "../utils/settings.utils"
 
 interface UserRolesTableInterface {
     data: UserRoleType[]
@@ -61,12 +61,7 @@ const UserRolesTable = ({ data }: UserRolesTableInterface) => {
                             <TableCell className="text-gray-90">
                                 {item.dateCreated}
                             </TableCell>
-                            <TableCell>
-                                <div className="flex bg-[#ECFDF3] w-fit rounded-[16px] items-center p-2 text-[#027A48] font-medium">
-                                    <Check size={14} color="#12B76A" />
-                                    {item.status}
-                                </div>
-                            </TableCell>
+                            <TableCell>{userStatus(item.status)}</TableCell>
                             <TableCell>
                                 <img src={item.roleUsers} alt="" />
                             </TableCell>

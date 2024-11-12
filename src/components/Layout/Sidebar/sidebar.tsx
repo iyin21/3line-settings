@@ -12,8 +12,11 @@ const Sidebar = () => {
             <div
                 className="mt-6 flex items-center border border-[#D6BBFB] p-2  rounded-[8px]"
                 style={{ boxShadow: "0px 0px 0px 4px rgba(244, 235, 255, 1)" }}
-            ><div><Search color="#667085" size={18} /></div>
-                
+            >
+                <div>
+                    <Search color="#667085" size={18} />
+                </div>
+
                 <input
                     type="text"
                     placeholder="Olivia Rhye"
@@ -26,7 +29,11 @@ const Sidebar = () => {
                         className="flex items-center   text-md text-black-90 "
                         key={index}
                     >
-                        <div className={`flex items-center justify-between w-full  font-medium  py-4 p-2 ${index===7 && "bg-[#F9FAFB] rounded-[6px]"}`}>
+                        <div
+                            className={`flex items-center justify-between w-full  font-medium  py-4 p-2 ${
+                                index === 7 && "bg-[#F9FAFB] rounded-[6px]"
+                            }`}
+                        >
                             <div className="flex items-center gap-2  ">
                                 <img src={route.Icon} alt="" />
                                 <p className="text-lg">{route?.name}</p>
@@ -50,12 +57,15 @@ const Sidebar = () => {
                 </div>
             </div>
             <hr className="bg-[#EAECF0] my-2" />
-            <div className="flex gap-2">
-                <img src={Avatar} alt="Avatar" />
-                <div className="">
-                    <p className="text-black-[#101828]">Olivia Rhye</p>
-                    <p className="text-gray-90">olivia@untitledui.com</p>
+            <div className="flex justify-between  mt-4">
+                <div className="flex  gap-2">
+                    <img src={Avatar} alt="Avatar" />
+                    <div className="">
+                        <p className="text-black-[#101828]">Olivia Rhye</p>
+                        <p className="text-gray-90">olivia@untitledui.com</p>
+                    </div>
                 </div>
+
                 <LogOut color="#667085" />
             </div>
         </aside>
