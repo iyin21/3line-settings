@@ -27,9 +27,11 @@ const UserRolesTable = ({ data }: UserRolesTableInterface) => {
     ]
     return (
         <div>
-            <Table className="rounded-[24px] pl-2 border border-[#EAECF0] shadow-[0px_2px_4px_-2px_ rgba(16, 24, 40, 0.06)]">
+            <Table className="rounded-[24px] pl-2 border border-[#EAECF0]"
+            style={{ boxShadow: "0px 2px 4px -2px rgba(16, 24, 40, 0.06)" }}
+            >
                 <TableHeader className="">
-                    <TableRow className="bg-[#F9FAFB] text-gray-90 ">
+                    <TableRow className="bg-[#F9FAFB] text-gray-90">
                         {tableHeaders.map((item, index) => (
                             <TableHead className="w-[100px] " key={index}>
                                 <div className="flex items-center text-nowrap">
@@ -55,7 +57,7 @@ const UserRolesTable = ({ data }: UserRolesTableInterface) => {
                             <TableCell className="font-medium text-black-[#101828] sm:w-[35%]">
                                 {item.name}
                             </TableCell>
-                            <TableCell className="text-gray-90">
+                            <TableCell className="text-gray-90 text-nowrap">
                                 {item.type}
                             </TableCell>
                             <TableCell className="text-gray-90">
@@ -65,7 +67,7 @@ const UserRolesTable = ({ data }: UserRolesTableInterface) => {
                             <TableCell className="w-ful">
                                 <img src={item.roleUsers} alt="" />
                             </TableCell>
-                            <TableCell className="text-right">
+                            <TableCell className="flex justify-end sm:pr-4">
                                 <CloudDownload color="#667085" />
                             </TableCell>
                         </TableRow>
